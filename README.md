@@ -125,7 +125,7 @@ low RAM phones
 
 ## 🌐 Website
 
-the.mp3x.xo.je
+https://the.mp3x.xo.je
 
 
 ---
