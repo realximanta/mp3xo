@@ -84,39 +84,51 @@ a:active {
     Powered by MP3X
   </div>
 
+  <div id="musics">
+    <div id="count" class="subtitle"></div>
+
   <script>
     fetch('musics.txt')
-      .then(response => response.text())
-      .then(text => {
+  .then(response => response.text())
+  .then(text => {
 
-        const container = document.getElementById('stories');
-        container.innerHTML = '';
+    const container = document.getElementById('musics');
+    const countBox = document.getElementById('count');
 
-        const lines = text.trim().split('\n');
+    container.innerHTML = '';
 
-        lines.forEach(line => {
+    const lines = text.trim().split('\n');
 
-          if (!line.trim()) return;
+    let total = 0;
 
-          const parts = line.split('|');
+    lines.forEach(line => {
 
-          const file = parts[0]?.trim();
-          const title = parts[1]?.trim();
+      if (!line.trim()) return;
 
-          if (!file || !title) return;
+      const parts = line.split('|');
 
-          const link = document.createElement('a');
+      const file = parts[0]?.trim();
+      const title = parts[1]?.trim();
 
-          link.href = file;
-          link.innerText = title;
-          link.setAttribute('download', '');
+      if (!file || !title) return;
 
-          container.appendChild(link);
-        });
-      })
-      .catch(error => {
-        document.getElementById('stories').innerHTML = 'Unable to load stories.';
-      });
+      total++;
+
+      const link = document.createElement('a');
+
+      link.href = file;
+      link.innerText = title;
+      link.setAttribute('download', '');
+
+      container.appendChild(link);
+    });
+
+    countBox.innerText = total + ' downloadable musics';
+  })
+  .catch(error => {
+    document.getElementById('musics').innerHTML =
+      'Unable to load musics.';
+  });
   </script>
 
 </body>
