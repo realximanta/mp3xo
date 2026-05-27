@@ -6,129 +6,173 @@
   <title>MP3X</title>
 
   <style>
+
     body {
-  font-family: Arial, sans-serif;
-  background: #f3f3f3;
-  color: #111;
-  margin: 0;
-  padding: 12px;
-  font-size: 18px;
-  line-height: 1.8;
-}
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      color: #111;
+      margin: 0;
+      padding: 10px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
 
-.container {
-  background: white;
-  max-width: 700px;
-  margin: auto;
-  padding: 14px;
-  border: 1px solid #dcdcdc;
-}
+    .container {
+      background: white;
+      max-width: 700px;
+      margin: auto;
+      padding: 14px;
+      border: 1px solid #d8d8d8;
+    }
 
-h1 {
-  font-size: 24px;
-  margin-top: 0;
-  margin-bottom: 4px;
-  letter-spacing: 1px;
-}
+    h1 {
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 4px;
+      letter-spacing: 1px;
+    }
 
-.subtitle {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 18px;
-}
+    .subtitle {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 14px;
+    }
 
-.line {
-  border-top: 1px solid #ddd;
-  margin-bottom: 14px;
-}
+    .count {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 18px;
+      border-top: 1px solid #ddd;
+      border-bottom: 1px solid #ddd;
+      padding: 7px 0;
+    }
 
-#stories {
-  margin-top: 10px;
-}
+    #musics {
+      margin-top: 10px;
+    }
 
-a {
-  color: #0044cc;
-  text-decoration: underline;
-  display: block;
-  padding: 8px 0;
-  word-break: break-word;
-}
+    a {
+      color: #0044cc;
+      text-decoration: underline;
+      display: block;
+      padding: 8px 0;
+      word-break: break-word;
+    }
 
-a:focus,
-a:active {
-  background: #dde7ff;
-}
+    a:hover {
+      color: #002f91;
+    }
 
-.footer {
-  margin-top: 26px;
-  font-size: 12px;
-  color: #666;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
-}
+    a:focus,
+    a:active {
+      background: #dde7ff;
+    }
+
+    .footer {
+      margin-top: 28px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      font-size: 12px;
+      color: #666;
+    }
+
+    .status {
+      font-size: 13px;
+      color: green;
+      margin-bottom: 10px;
+    }
+
   </style>
 </head>
+
 <body>
 
-  <h1>MP3X BY REAL.XIMANTA</h1>
+  <div class="container">
 
-  <div class="subtitle">
-    100% TRUSTED platform To Download Free songs & musics.
+    <h1>MP3X BY REAL.XIMANTA</h1>
+
+    <div class="subtitle">
+      100% TRUSTED platform To Download Free songs & musics.
+    </div>
+
+    <div class="status">
+      ● ONLINE
+    </div>
+
+    <div id="count" class="count">
+      Loading musics count...
+    </div>
+
+    <div id="musics">
+      Loading musíso...
+    </div>
+
+    <div class="footer">
+      Powered by MP3X
+    </div>
+
   </div>
-
-  <div id="stories">
-    Loading musíso...
-  </div>
-
-  <div class="footer">
-    Powered by MP3X
-  </div>
-
-  <div id="musics">
-    <div id="count" class="subtitle"></div>
 
   <script>
+
     fetch('musics.txt')
-  .then(response => response.text())
-  .then(text => {
 
-    const container = document.getElementById('musics');
-    const countBox = document.getElementById('count');
+      .then(response => response.text())
 
-    container.innerHTML = '';
+      .then(text => {
 
-    const lines = text.trim().split('\n');
+        const container =
+          document.getElementById('musics');
 
-    let total = 0;
+        const countBox =
+          document.getElementById('count');
 
-    lines.forEach(line => {
+        container.innerHTML = '';
 
-      if (!line.trim()) return;
+        const lines =
+          text.trim().split('\\n');
 
-      const parts = line.split('|');
+        let total = 0;
 
-      const file = parts[0]?.trim();
-      const title = parts[1]?.trim();
+        lines.forEach(line => {
 
-      if (!file || !title) return;
+          if (!line.trim()) return;
 
-      total++;
+          const parts = line.split('|');
 
-      const link = document.createElement('a');
+          const file = parts[0]?.trim();
 
-      link.href = file;
-      link.innerText = title;
-      link.setAttribute('download', '');
+          const title = parts[1]?.trim();
 
-      container.appendChild(link);
-    });
+          if (!file || !title) return;
 
-    countBox.innerText = total + ' downloadable musics';
-  })
-  .catch(error => {
-    document.getElementById('musics').innerHTML =
-      'Unable to load musics.';
-  });
+          total++;
+
+          const link =
+            document.createElement('a');
+
+          link.href = file;
+
+          link.innerText = title;
+
+          link.setAttribute('download', '');
+
+          container.appendChild(link);
+
+        });
+
+        countBox.innerText =
+          total + ' downloadable musics';
+
+      })
+
+      .catch(error => {
+
+        document.getElementById('musics').innerHTML =
+          'Unable to load musics.';
+
+      });
+
   </script>
 
 </body>
