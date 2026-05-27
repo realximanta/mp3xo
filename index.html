@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>MP3X</title>
 
   <style>
@@ -14,7 +16,7 @@
       margin: 0;
       padding: 10px;
       font-size: 18px;
-      line-height: 1.8;
+      line-height: 1.7;
     }
 
     .container {
@@ -38,13 +40,20 @@
       margin-bottom: 14px;
     }
 
+    .status {
+      font-size: 13px;
+      color: green;
+      margin-bottom: 10px;
+    }
+
     .count {
       font-size: 13px;
       color: #666;
-      margin-bottom: 18px;
+      margin-top: 10px;
+      margin-bottom: 16px;
+      padding: 8px 0;
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
-      padding: 7px 0;
     }
 
     #musics {
@@ -54,20 +63,10 @@
     a {
       color: #0044cc;
       text-decoration: underline;
-      display: block;
-      padding: 10px 0;
-      margin-bottom: 6px;
-      border-bottom: 1px solid #e5e5e5;
+      display: inline-block;
+      padding: 4px 0;
+      margin-bottom: 14px;
       word-break: break-word;
-    }
-    
-    a:hover {
-      color: #002f91;
-    }
-
-    a:focus,
-    a:active {
-      background: #dde7ff;
     }
 
     .footer {
@@ -76,12 +75,6 @@
       border-top: 1px solid #ddd;
       font-size: 12px;
       color: #666;
-    }
-
-    .status {
-      font-size: 13px;
-      color: green;
-      margin-bottom: 10px;
     }
 
   </style>
@@ -113,6 +106,77 @@
       Powered by MP3X
     </div>
 
+  </div>
+
+  <script>
+
+    fetch('musics.txt')
+
+      .then(response => response.text())
+
+      .then(text => {
+
+        const container =
+          document.getElementById('musics');
+
+        const countBox =
+          document.getElementById('count');
+
+        container.innerHTML = '';
+
+        const lines =
+          text.trim().split('\n');
+
+        let total = 0;
+
+        lines.forEach(line => {
+
+          if (!line.trim()) return;
+
+          const parts = line.split('|');
+
+          const file = parts[0]?.trim();
+
+          const title = parts[1]?.trim();
+
+          if (!file || !title) return;
+
+          total++;
+
+          const link =
+            document.createElement('a');
+
+          link.href = file;
+
+          link.innerText = title;
+
+          link.setAttribute('download', '');
+
+          container.appendChild(link);
+
+          container.appendChild(
+            document.createElement('br')
+          );
+
+        });
+
+        countBox.innerText =
+          total + ' downloadable musics';
+
+      })
+
+      .catch(error => {
+
+        document.getElementById('musics').innerHTML =
+          'Unable to load musics.';
+
+      });
+
+  </script>
+
+</body>
+
+</html>
   </div>
 
   <script>
