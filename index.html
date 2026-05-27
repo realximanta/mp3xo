@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP3X</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      color: black;
+      margin: 12px;
+      padding: 0;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    h1 {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    #stories {
+      margin-top: 10px;
+    }
+
+    a {
+      color: blue;
+      text-decoration: underline;
+      display: block;
+      margin-bottom: 14px;
+      word-break: break-word;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>MP3X BY REAL.XIMANTA</h1>
+
+  <div class="subtitle">
+    Simple audio stories for everyone.
+  </div>
+
+  <div id="stories">
+    Loading musíso...
+  </div>
+
+  <div class="footer">
+    Powered by MP3X
+  </div>
+
+  <script>
+    fetch('musics.txt')
+      .then(response => response.text())
+      .then(text => {
+
+        const container = document.getElementById('stories');
+        container.innerHTML = '';
+
+        const lines = text.trim().split('\n');
+
+        lines.forEach(line => {
+
+          if (!line.trim()) return;
+
+          const parts = line.split('|');
+
+          const file = parts[0]?.trim();
+          const title = parts[1]?.trim();
+
+          if (!file || !title) return;
+
+          const link = document.createElement('a');
+
+          link.href = file;
+          link.innerText = title;
+          link.setAttribute('download', '');
+
+          container.appendChild(link);
+        });
+      })
+      .catch(error => {
+        document.getElementById('stories').innerHTML = 'Unable to load stories.';
+      });
+  </script>
+
+</body>
+</html>
