@@ -95,7 +95,7 @@ musics.txt
 
 Example:
 
-love-me-not.mp3|I thought I saw your face today. [SPECIAL]
+itisyft.mp3|I thought I saw your face today. [SPECIAL]
 
 
 ---
