@@ -1,14 +1,14 @@
-name: Generate Music Index
+name: Generate Music Index v2 Ximanta
 
 on:
   push:
     paths:
-      - "musics.txt"
-      - "*.mp3"
-      - "generator.py"
-  workflow_dispatch:        # manual trigger from GitHub UI
+      - "*.mp3"           # any MP3 added, renamed, or deleted
+      - "generator.py"    # logic change → regenerate
+  workflow_dispatch:      # manual trigger from the GitHub Actions UI
 
-# Prevent two runs from writing index.html at the same time.
+# Queue runs instead of cancelling — two pushes close together should
+# both complete, not race each other to write index.html.
 concurrency:
   group: generate-index
   cancel-in-progress: false
@@ -16,20 +16,25 @@ concurrency:
 jobs:
   generate:
     runs-on: ubuntu-latest
+
     permissions:
-      contents: write       # needed to push the updated index.html
+      contents: write     # required to push the updated index.html
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Fetch with the token so the push step is authenticated.
+          # Use GITHUB_TOKEN so the push step is authenticated.
+          # fetch-depth: 0 gives generator.py full git history so it can
+          # read per-file commit timestamps for newest-first sorting.
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          # No third-party packages needed — stdlib only.
 
       - name: Run generator
         run: python generator.py
@@ -39,15 +44,17 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage only index.html — never commit generator.py changes
-          # triggered by this workflow itself (avoids infinite loop).
+          # Stage only index.html.
+          # generator.py and *.mp3 files are never committed by this bot,
+          # which prevents any possibility of an infinite trigger loop.
           git add index.html
 
-          # `git diff --cached --quiet` exits 0 when nothing is staged.
+          # Exit 0 from diff means nothing staged → skip commit entirely.
           if git diff --cached --quiet; then
-            echo "No changes to index.html — skipping commit."
+            echo "index.html unchanged — nothing to commit."
           else
-            git commit -m "chore: regenerate index.html from musics.txt [skip ci]"
+            # [skip ci] tells GitHub not to re-trigger workflows on this
+            # bot commit, providing a hard guarantee against infinite loops.
+            git commit -m "chore: regenerate index.html from MP3 files [skip ci]"
             git push
           fi
-
