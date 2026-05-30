@@ -188,13 +188,19 @@ Build a music platform that remains accessible regardless of device quality, int
 
 👤 Creator
 
-""Instagram"(https://img.shields.io/badge/Instagram-@real.ximanta-E4405F?style=for-the-badge&logo=instagram&logoColor=white)"(https://instagram.com/real.ximanta)
+<div align="center">
 
-""Portfolio"(https://img.shields.io/badge/Portfolio-about.ximanta.xyz-000000?style=for-the-badge&logo=vercel&logoColor=white)"(https://about.ximanta.xyz)
+[![Instagram](https://img.shields.io/badge/Instagram-%40real.ximanta-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/real.ximanta)
+[![Portfolio](https://img.shields.io/badge/Portfolio-about.ximanta.xyz-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://about.ximanta.xyz)
+[![Backup GitHub](https://img.shields.io/badge/Backup_GitHub-%40realtuku-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/realtuku)
+[![Email](https://img.shields.io/badge/Email-realximanta%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:realximanta@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-%2B856_20_51_701_854-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/85620517018540)
+</div>
 
-""Backup GitHub"(https://img.shields.io/badge/Backup_GitHub-@realtuku-181717?style=for-the-badge&logo=github&logoColor=white)"(https://github.com/realtuku)
+---
 
-""Email"(https://img.shields.io/badge/Email-realximanta@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)"(mailto:realximanta@gmail.com)
+> «Technology should work for everyone — not just the latest devices.»
+
 
 ---
 
