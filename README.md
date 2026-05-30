@@ -1,144 +1,201 @@
-# 🎧 MP3X
+🎧 MP3X
 
-> Lightweight music downloading for the real internet.
+«Lightweight music downloading for the real internet.»
 
 ---
 
-## 🌍 Built For
+🌍 Built For
 
-MP3X is designed specially for:
+MP3X is designed for people often ignored by modern web design:
 
 - 📱 Keypad phone users
 - 🌐 Opera Mini browsers
 - 🛰️ Slow internet connections
 - 💾 Low storage devices
 - 🎵 Offline music listeners
-- ⚡ Lightweight web experience lovers
+- ⚡ Lightweight web enthusiasts
 
 ---
 
-## ✨ Philosophy
+✨ Philosophy
 
 Modern music websites became:
-- heavy
-- ad-filled
-- slow
-- confusing
 
-MP3X stays simple.
+- Heavy
+- Ad-filled
+- Slow
+- Resource hungry
+- Difficult on low-end devices
 
-```txt
-Open website
+MP3X follows a different approach.
+
+Open Website
 ↓
-Select music
+Select Music
 ↓
 Download
 
 Nothing else.
-```
 
-
----
-
-## 🚀 Features
-
-⚡ Ultra lightweight
-
-📥 Direct MP3 downloading
-
-📱 Mobile friendly
-
-🎹 Keypad optimized
-
-🌐 Opera Mini compatible
-
-☁️ GitHub Pages hosted
-
-🧠 No frameworks
-
-🔋 Low data usage
-
-💾 Small file focused
-
-
+No accounts.
+No tracking.
+No unnecessary complexity.
 
 ---
 
-## 🛠️ Tech Stack
+🚀 Features
+
+- ⚡ Ultra Lightweight
+- 📥 Direct MP3 Downloads
+- 📱 Mobile Friendly
+- 🎹 Keypad Optimized
+- 🌐 Opera Mini Compatible
+- ☁️ GitHub Pages Hosted
+- 🧠 No Frameworks
+- 🔋 Low Data Usage
+- 💾 Small File Focused
+- 🤖 Automatic Music Discovery
+- 🛠️ GitHub Actions Automation
+
+---
+
+🤖 Automatic Music System
+
+MP3X automatically generates its music library.
+
+Simply upload:
+
+Billie-Jean.mp3
+
+And MP3X automatically displays:
+
+Billie Jean
+
+No manual editing.
+
+No music database.
+
+No playlist files.
+
+The website updates itself from uploaded MP3 filenames.
+
+---
+
+🧠 Smart Filename Parsing
+
+Examples:
+
+Billie-Jean.mp3
+
+↓
+
+Billie Jean
+
+Village-Ghost-Story.mp3
+
+↓
+
+Village Ghost Story
+
+Future support:
+
+[NEW]-Ghost-Story.mp3
+
+↓
+
+🆕 Ghost Story
+
+[SPECIAL]-Ghost-Story.mp3
+
+↓
+
+⭐ Ghost Story
+
+---
+
+🛠️ Tech Stack
 
 HTML
 CSS
-Vanilla JavaScript
+Python
+GitHub Actions
 GitHub Pages
 
 No backend.
-No database.
-No unnecessary complexity.
 
+No database.
+
+No server costs.
 
 ---
 
-## 📂 Structure
+📂 Structure
 
 index.html
-musics.txt
-song.mp3
+generator.py
+.github/workflows/update.yml
 
-
----
-
-## 🎵 Music System
-
-Music list is generated automatically from:
-
-musics.txt
-
-Example:
-
-itisyft.mp3|I thought I saw your face today. [SPECIAL]
-
+Billie-Jean.mp3
+Ghost-Story.mp3
+Village-River.mp3
 
 ---
 
-## 📡 Optimization
+⚙️ How It Works
 
-Recommended bitrate:
+Upload MP3
+↓
+GitHub Action Runs
+↓
+generator.py Scans Files
+↓
+Titles Generated Automatically
+↓
+index.html Updated
+↓
+Website Published
 
-32kbps
+---
 
-48kbps
+📡 Optimization
 
-Mono audio
+Recommended audio settings:
 
+- 32kbps Mono
+- 48kbps Mono
 
 Optimized for:
 
-weak networks
-
-slow browsers
-
-low RAM phones
-
-
+- Weak Networks
+- Slow Browsers
+- Low RAM Devices
+- JioBharat Phones
+- Opera Mini
 
 ---
 
-## 🌐 Website
+🌐 Website
 
 https://music.mp3x.xo.je
 
+---
+
+🎯 Goal
+
+Build a music platform that remains accessible regardless of device quality, internet speed, or location.
 
 ---
 
-## 🧠 Goal
+👤 Creator
 
-Build a music platform that works for everyone — not only high-end smartphones.
+""Instagram" (https://img.shields.io/badge/Instagram-@real.ximanta-E4405F?style=for-the-badge&logo=instagram&logoColor=white)" (https://instagram.com/real.ximanta)
 
+""Portfolio" (https://img.shields.io/badge/Portfolio-about.ximanta.xyz-000000?style=for-the-badge&logo=vercel&logoColor=white)" (https://about.ximanta.xyz)
+
+""GitHub" (https://img.shields.io/badge/Backup_GitHub-@realtuku-181717?style=for-the-badge&logo=github&logoColor=white)" (https://github.com/realtuku)
+
+""Email" (https://img.shields.io/badge/Email-realximanta@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white)" (mailto:realximanta@gmail.com)
 
 ---
 
-## 👤 Creator
-
-[![Instagram](https://img.shields.io/badge/Instagram-@real.ximanta-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/real.ximanta)
-
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-+8562051701854-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/8562051701854)
+«Technology should work for everyone — not just the latest devices.»
