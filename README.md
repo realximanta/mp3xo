@@ -65,21 +65,21 @@ Modern music platforms became:
 
 ```
   ┌─────────────────────────────────────────────┐
-  │                                                     │
-  │   You upload:   Billie-Jean.mp3                     │
-  │                        ↓                            │
-  │   GitHub Action triggers automatically              │
-  │                        ↓                            │
-  │   generator.py scans repository root                │
-  │                        ↓                            │
-  │   Filename parsed  →  "Billie Jean"                │
-  │                        ↓                            │
-  │   index.html rebuilt with new music list            │
-  │                        ↓                            │
-  │   GitHub Pages publishes updated site               │
-  │                        ↓                            │
-  │   Visitor taps link  →  MP3 downloads  ✓           │
-  │                                                     │
+  │                                             │
+  │   You upload:   Billie-Jean.mp3             │
+  │                        ↓                    │
+  │   GitHub Action triggers automatically      │
+  │                        ↓                    │
+  │   generator.py scans repository root        │
+  │                        ↓                    │
+  │   Filename parsed  →  "Billie Jean"         │
+  │                        ↓                    │
+  │   index.html rebuilt with new music lis     │
+  │                        ↓                    │
+  │   GitHub Pages publishes updated site       │
+  │                        ↓                    │
+  │   Visitor taps link  →  MP3 downloads  ✓    │
+  │                                             │
   └─────────────────────────────────────────────┘
 ```
 
@@ -142,14 +142,14 @@ Rules applied automatically:
 
 ```
   ╔═════════════════════════════════╗
-  ║  FRONTEND    →  HTML  +  CSS         ║
-  ║  GENERATOR   →  Python 3.12          ║
-  ║  AUTOMATION  →  GitHub Actions       ║
-  ║  HOSTING     →  GitHub Pages         ║
-  ║  BACKEND     →  none                 ║
-  ║  DATABASE    →  none                 ║
-  ║  SERVER      →  none                 ║
-  ║  COST        →  $0.00                ║
+  ║  FRONTEND    →  HTML  +  CSS    ║
+  ║  GENERATOR   →  Python 3.12     ║
+  ║  AUTOMATION  →  GitHub Actions  ║
+  ║  HOSTING     →  GitHub Pages    ║
+  ║  BACKEND     →  none            ║
+  ║  DATABASE    →  none            ║
+  ║  SERVER      →  none            ║
+  ║  COST        →  $0.00           ║
   ╚═════════════════════════════════╝
 ```
 
@@ -181,11 +181,11 @@ For best compatibility with slow networks and low-end devices:
   Recommended encoding:
 
   ┌──────────────┬─────────┬────────────────┐
-  │ Bitrate      │ Channels│ Best for              │
+  │ Bitrate      │ Channels│ Best for       │
   ├──────────────┼─────────┼────────────────┤
-  │ 32 kbps      │ Mono    │ 2G / JioBharat        │
-  │ 48 kbps      │ Mono    │ Slow 3G / Opera Mini  │
-  │ 64 kbps      │ Mono    │ Standard 3G           │
+  │ 32 kbps      │ Mono    │ 2G / JioBharat │
+  │ 48 kbps      │ Mono    │ Slow 3G        │
+  │ 64 kbps      │ Mono    │ Standard 3G    │
   └──────────────┴─────────┴────────────────┘
 ```
 
@@ -195,7 +195,7 @@ For best compatibility with slow networks and low-end devices:
 
 <div align="center">
 
-### 🔗 [music.mp3x.xo.je](https://music.mp3x.xo.je)
+### 🔗 [VISIT SITE](https://music.mp3x.xo.je)
 
 </div>
 
