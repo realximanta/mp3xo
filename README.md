@@ -181,7 +181,7 @@ For best compatibility with slow networks and low-end devices:
 ```
   Recommended encoding:
 
-  ┌──────────────┬─────────┬────────────────┐
+  ┌──────────────┬─────────┬──────────┐
   │ Bitrate      │ Channels│ Best for       │
   ├──────────────┼─────────┼────────────────┤
   │ 32 kbps      │ Mono    │ 2G / JioBharat │
