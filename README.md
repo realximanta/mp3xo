@@ -187,7 +187,7 @@ For best compatibility with slow networks and low-end devices:
   │ 32 kbps      │ Mono    │ 2G / JioBharat │
   │ 48 kbps      │ Mono    │ Slow 3G        │
   │ 64 kbps      │ Mono    │ Standard 3G    │
-  └──────────────┴─────────┴────────────────┘
+  └──────────────┴─────────┴──────────┘
 ```
 
 ---
