@@ -65,7 +65,7 @@ Modern music platforms became:
 ## ⚙️ How It Works
 
 ```
-  ┌─────────────────────────────────────────────┐
+  ┌──────────────────────────────────────┐
   │                                             │
   │   You upload:   Billie-Jean.mp3             │
   │                        ↓                    │
@@ -73,15 +73,15 @@ Modern music platforms became:
   │                        ↓                    │
   │   generator.py scans repository root        │
   │                        ↓                    │
-  │   Filename parsed  →  "Billie Jean"         │
+  │   Filename parsed  →  "Billie Jean"        │
   │                        ↓                    │
   │   index.html rebuilt with new music lis     │
   │                        ↓                    │
   │   GitHub Pages publishes updated site       │
   │                        ↓                    │
-  │   Visitor taps link  →  MP3 downloads  ✓    │
+  │   Visitor taps link  →  MP3 downloads  ✓   │
   │                                             │
-  └─────────────────────────────────────────────┘
+  └──────────────────────────────────────┘
 ```
 
 **Zero manual editing. Zero playlist files. Zero database.**
