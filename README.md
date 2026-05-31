@@ -17,7 +17,7 @@
 
 ---
 
-## 🌍 Built For
+🌍 Built For
 
 > MP3X is designed for people **often ignored** by modern web design.
 
@@ -32,7 +32,7 @@
 
 ---
 
-## ✨ Philosophy
+✨ Philosophy
 
 Modern music platforms became:
 
@@ -62,7 +62,7 @@ Modern music platforms became:
 
 ---
 
-## ⚙️ How It Works
+⚙️ How It Works
 
 ```
   ┌──────────────────────────────────────┐
@@ -90,7 +90,7 @@ The website updates itself.
 
 ---
 
-## 🧠 Smart Filename Parsing
+🧠 Smart Filename Parsing
 
 Just name your file correctly — MP3X does the rest.
 
@@ -116,7 +116,7 @@ Rules applied automatically:
 
 ---
 
-## 🚀 Features
+🚀 Features
 
 <div align="center">
 
@@ -139,7 +139,7 @@ Rules applied automatically:
 
 ---
 
-## 🛠️ Tech Stack
+🛠️ Tech Stack
 
 ```
   ╔════════════════════════════╗
@@ -156,7 +156,7 @@ Rules applied automatically:
 
 ---
 
-## 📂 Repository Structure
+📂 Repository Structure
 
 ```
   mp3x/
@@ -174,7 +174,7 @@ Rules applied automatically:
 
 ---
 
-## 📡 Audio Optimization
+📡 Audio Optimization
 
 For best compatibility with slow networks and low-end devices:
 
@@ -192,17 +192,17 @@ For best compatibility with slow networks and low-end devices:
 
 ---
 
-## 🌐 Live Website
+🌐 Live Website
 
 <div align="center">
 
-### 🔗 [𝗩𝗜𝗦𝗜𝗧 𝗟𝗜𝗩𝗘 𝗦𝗜𝗧𝗘 𝗛𝗘𝗥𝗘! ✅](https://music.mp3x.xo.je)
+🔗 [𝗩𝗜𝗦𝗜𝗧 𝗟𝗜𝗩𝗘 𝗦𝗜𝗧𝗘 𝗛𝗘𝗥𝗘! ✅](https://music.mp3x.xo.je)
 
 </div>
 
 ---
 
-## 🎯 Goal
+🎯 Goal
 
 > Build a music platform that remains **accessible regardless of device quality, internet speed, or location.**
 >
@@ -210,7 +210,7 @@ For best compatibility with slow networks and low-end devices:
 
 ---
 
-## 👤 Creator
+👤 Creator
 
 <div align="center">
 
