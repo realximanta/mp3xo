@@ -12,6 +12,7 @@
 ---
 ```
   [ music for every phone. every network. every person. ]
+> Works on any devices. 
 ```
 
 ---
