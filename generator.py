@@ -1,28 +1,3 @@
-"""
-generator.py — MP3X static HTML generator (v2)
-
-Scans the repository root for *.mp3 files, derives human-readable
-titles from filenames, and injects static <div class="music-item">
-blocks into the <div id="musics">…</div> section of index.html.
-
-No musics.txt required.
-
-Filename → title rules
-──────────────────────
-  Billie-Jean.mp3                    →  Billie Jean
-  Village-Ghost-Story.mp3            →  Village Ghost Story
-  I-Thought-I-Saw-Your-Face-Today.mp3 →  I Thought I Saw Your Face Today
-  [NEW]-Cool-Song.mp3                →  Cool Song   (tag stripped, stored separately)
-  [SPECIAL]-Another.mp3             →  Another      (tag stripped, stored separately)
-
-Tag prefix rules (future-ready)
-────────────────────────────────
-  Filenames may begin with a bracketed tag: [TAG]-Rest-Of-Name.mp3
-  The tag is parsed out and stored in entry["tags"] as a list.
-  Multiple tags are supported: [NEW][SPECIAL]-Name.mp3 → tags=["NEW","SPECIAL"]
-  The title is derived from the remainder only.
-"""
-
 from __future__ import annotations
 
 import html
