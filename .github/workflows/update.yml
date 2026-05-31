@@ -1,14 +1,13 @@
-name: Generate Music Index v2 Ximanta
+name: Generate Music Index vX1.298.9 Ximanta
 
 on:
   push:
     paths:
-      - "*.mp3"           # any MP3 added, renamed, or deleted
-      - "generator.py"    # logic change → regenerate
-  workflow_dispatch:      # manual trigger from the GitHub Actions UI
+      - "*.mp3"           
+      - "generator.py"
+  workflow_dispatch:      
 
-# Queue runs instead of cancelling — two pushes close together should
-# both complete, not race each other to write index.html.
+
 concurrency:
   group: generate-index
   cancel-in-progress: false
@@ -18,24 +17,23 @@ jobs:
     runs-on: ubuntu-latest
 
     permissions:
-      contents: write     # required to push the updated index.html
+      contents: write     
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          # Use GITHUB_TOKEN so the push step is authenticated.
-          # fetch-depth: 0 gives generator.py full git history so it can
-          # read per-file commit timestamps for newest-first sorting.
+          
+          # credits - @real.ximanta and realximanta
+          
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-
+# wdym ur start liking my project soo much that u have clone it?
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          # No third-party packages needed — stdlib only.
-
+          
       - name: Run generator
         run: python generator.py
 
