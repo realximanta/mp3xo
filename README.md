@@ -12,7 +12,7 @@
 ---
 ```
   [ music for every phone. every network. every person. ]
-> Works on any devices. 
+ Works on any devices. 
 ```
 
 ---
@@ -142,7 +142,7 @@ Rules applied automatically:
 ## 🛠️ Tech Stack
 
 ```
-  ╔═════════════════════════════════╗
+  ╔════════════════════════════╗
   ║  FRONTEND    →  HTML  +  CSS    ║
   ║  GENERATOR   →  Python 3.12     ║
   ║  AUTOMATION  →  GitHub Actions  ║
@@ -151,7 +151,7 @@ Rules applied automatically:
   ║  DATABASE    →  none            ║
   ║  SERVER      →  none            ║
   ║  COST        →  $0.00           ║
-  ╚═════════════════════════════════╝
+  ╚════════════════════════════╝
 ```
 
 ---
